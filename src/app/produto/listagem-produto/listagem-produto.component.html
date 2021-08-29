@@ -1,0 +1,17 @@
+<div fxLayout= 'row wrap' fxLayout.lt-nd='column'>
+    <mat-card *ngFor="let produto of produtos" class="mat-card-listagem" fxFlex="23%">
+        <mat-card-header>
+            <mat-card-title>{{produto.nome}}</mat-card-title>
+            <mat-card-subtitle>VALOR: {{produto.valor}} </mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image href="https://ibb.co/h1pkBs0"><img href="https://ibb.co/h1pkBs0"><img src="https://i.ibb.co/h1pkBs0/grandbacon.jpg" alt="grandbacon" >
+        <mat-card-content>
+            <p>
+                {{produto.descricao}}
+            </p>
+          </mat-card-content>
+        <mat-card-actions>
+            <button mat-icon-button (click)= "adicionarCarrinho(produto)"><mat-icon>add</mat-icon></button>
+        </mat-card-actions>
+    </mat-card>
+</div>
