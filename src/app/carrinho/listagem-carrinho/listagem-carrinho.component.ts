@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from 'src/app/shared/model/produto';
+import { CarrinhoFirestoreService } from 'src/app/shared/services/carrinho-firestore.service';
 import { CarrinhoService } from 'src/app/shared/services/carrinho.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class ListagemCarrinhoComponent implements OnInit {
   produto = Produto;
   carrinho: Array<Produto>;
 
-  constructor(private carrinhoService: CarrinhoService) { }
+  constructor(private carrinhoService: CarrinhoFirestoreService) { }
 
   ngOnInit(): void {
     this.carrinhoService.listar().subscribe(
@@ -21,7 +22,7 @@ export class ListagemCarrinhoComponent implements OnInit {
   }
   
   removerCarrinho(produto: Produto): void{
-    this.carrinhoService.deletar(produto).subscribe()
+    this.carrinhoService.remover(produto.id).subscribe()
     this.carrinhoService.listar().subscribe(
       carrinho => this.carrinho = carrinho
     );

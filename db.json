@@ -31,20 +31,5 @@
       "descricao": "Pão australiano, blend 180g envelopado com bacon, double cheddar e maionese de bacon."
     }
   ],
-  "carrinho": [
-    {
-      "imagem": "",
-      "nome": "grandBacon4",
-      "valor": 9,
-      "descricao": "Pão australiano, blend 180g envelopado com bacon, double cheddar e maionese de bacon.",
-      "id": 1
-    },
-    {
-      "imagem": "",
-      "nome": "grandBacon4",
-      "valor": 9,
-      "descricao": "Pão australiano, blend 180g envelopado com bacon, double cheddar e maionese de bacon.",
-      "id": 2
-    }
-  ]
+  "carrinho": []
 }

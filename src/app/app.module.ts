@@ -13,6 +13,7 @@ import { LayoutModule } from './layout/layout.module';
 import { RouterModule } from '@angular/router';
 import { CarrinhoModule } from './carrinho/carrinho.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FirestoreModule } from './firestore/firestore.module';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     LayoutModule,
     CarrinhoModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
